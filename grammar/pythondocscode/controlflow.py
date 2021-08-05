@@ -1,5 +1,4 @@
 from random import random
-
 # 流程控制
 def if_method():
     x = int( random.random() * 10)
@@ -270,4 +269,5 @@ if __name__ == '__main__':
     # print_list_param_method()
     # tuple_keyword_param_method()
     # special_param_invoke_method()
-    unpacke_method()
+    # unpacke_method()
+    pass
