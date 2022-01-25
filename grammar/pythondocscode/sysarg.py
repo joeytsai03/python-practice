@@ -1,4 +1,3 @@
-import random
 import sys
 
 
@@ -7,16 +6,32 @@ import sys
 def print_argv():
     print(sys.argv)
 
+
 def fibonacci(n):
-    a,b = 0,1
+    a, b = 0, 1
     while a < n:
         print('a = ' + str(a))
         a, b = b, a + b
+
 
 def fibonacci_main():
     fibonacci(5)
 
 
 if __name__ == '__main__':
-    print_argv()
+    # parser = argparse.ArgumentParser(description='迁移脚本参数解析')
+    # parser.add_argument('--account-ids', dest='account_ids', nargs='+', type=int,
+    #                     help='讲师id列表')
+    # parser.add_argument('--all', dest='is_all', action='store_true',
+    #                     help='全网更新')
+    # parser.add_argument('--not-all', dest='is_all', action='store_false',
+    #                     help='非全网更新')
+    # args = parser.parse_args()
+    # print(args.account_ids)
+    # print(args.is_all)
+    # print_argv()
     # fibonacci_main()
+    func = fibonacci_main
+    datas = []
+    print(type(func))
+    print(type(datas))
