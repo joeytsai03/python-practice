@@ -1,0 +1,16 @@
+syntax = "proto3";
+option py_generic_services = true;
+service GrpcService {
+  rpc hello (HelloRequest) returns (HelloResponse) {}  //一个服务中可以定义多个接口，也就是多个函数功能
+}
+message HelloRequest {
+  string data = 1;   //数字1,2是参数的位置顺序，并不是对参数赋值
+  Skill skill = 2;  //支持自定义的数据格式，非常灵活
+};
+message HelloResponse {
+  string result = 1;
+  map<string, int32> map_result = 2; //支持map数据格式，类似dict
+};
+message Skill {
+  string name = 1;
+};
